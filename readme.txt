@@ -14,7 +14,7 @@ Disclaimer and Notification Manager for Authors
 
 This plugin simplify the process of adding Disclaimers and Custom Notifications at the top, middle or bottom of articles written by Guest contributors.
 
-== Features ==
+= Features =
 
 1. Set a disclaimer text or notification that will display in every post made by guest authors.
 
