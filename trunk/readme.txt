@@ -12,7 +12,7 @@ Disclaimer and Notification Manager for Authors
 
 == Description ==
 
-This plugin simplify the process of adding Disclaimers at the top or bottom of an article written by a guest contributor.
+This plugin simplify the process of adding Disclaimers and Custom Notifications at the top, middle or bottom of articles written by Guest contributors.
 
 == Features ==
 
@@ -43,6 +43,12 @@ Search and install the plugin from your WordPres dashboard.
 
 == Screenshots ==
 
+1. Disclaimer Message | Settings Page
+2. CSS Style | Settings Page 
+3. Disclaimer Position | Settings Page
+4. Authors | Settings Page
+5. Meta Box | Settings Page
+6. Demo
 
 == Frequently Asked Questions ==
 
