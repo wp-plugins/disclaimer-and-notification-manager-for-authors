@@ -24,7 +24,7 @@ class Disclaimer_Manager_Meta_Box {
 	public function add_meta_box() {
 		add_meta_box(
 			'disclaimer_manager',
-			__( 'Disclaimer Manager', 'myplugin_textdomain' ),
+			__( 'Disclaimer / Notification Manager', 'myplugin_textdomain' ),
 			array( $this, 'render_meta_box_content' ),
 			'post',
 			'advanced',
@@ -102,7 +102,7 @@ class Disclaimer_Manager_Meta_Box {
 		<textarea class="widefat" rows="6" name="disclaimer_metabox_data"
 		          id="dm_disclaimer_css"><?php echo isset( $value ) ? $value : $default_disclaimer_text; ?></textarea>
 		<p class="description" align="right">
-			Disclaimer to be displayed at the end of Author's article or post.
+			Disclaimer / Notification to be displayed at the end of Author's article or post.
 		</p>
 	<?php
 	}
