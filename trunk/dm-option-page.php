@@ -28,7 +28,7 @@
 <div class="wrap">
 
 <div id="icon-options-general" class="icon32"></div>
-<h2>Disclaimer Manager for Authors</h2>
+<h2>Disclaimer and Notification Manager for Authors</h2>
 <?php if ( isset( $_GET['settings-update'] ) && $_GET['settings-update'] ) { ?>
 	<div id="message" class="updated"><p><strong>Settings saved. </strong></p></div>
 <?php
@@ -44,7 +44,7 @@
 		<form method="post">
 			<div class="postbox">
 
-				<h3><span>Disclaimer Message</span></h3>
+				<h3><span>Disclaimer / Notification Message</span></h3>
 
 				<div class="inside">
 					<table class="form-table">
@@ -57,7 +57,7 @@
 								          id="dm_disclaimer_text"><?php echo isset( $dm_disclaimer_manager_data['disclaimer_text'] ) ? $dm_disclaimer_manager_data['disclaimer_text'] : ''; ?></textarea>
 
 								<p class="description">
-									Enter <strong>Disclaimer</strong> Text for Guest Authors / Writers
+									Enter <strong>Disclaimer / Notification</strong> Text for Guest Authors / Writers
 								</p>
 
 								<p>You can also use the following placeholders: <br/>
@@ -88,7 +88,7 @@
 			<!-- .postbox -->
 			<div class="postbox">
 
-				<h3><span>Disclaimer CSS Style-sheet</span></h3>
+				<h3><span>Disclaimer / Notification CSS</span></h3>
 
 				<div class="inside">
 					<table class="form-table">
@@ -101,7 +101,7 @@
 								          id="dm_disclaimer_css"><?php echo isset( $dm_disclaimer_manager_data['disclaimer_css'] ) ? $dm_disclaimer_manager_data['disclaimer_css'] : ''; ?></textarea>
 
 								<p class="description">
-									The <strong>CSS Style</strong> for the Disclaimer Text
+									The <strong>CSS Style</strong> for the Disclaimer / Notification Text
 								</p>
 							</td>
 
@@ -121,7 +121,7 @@
 
 			<div class="postbox">
 
-				<h3><span>Disclaimer Position</span></h3>
+				<h3><span>Disclaimer / Notification Position</span></h3>
 
 				<div class="inside">
 					<table class="form-table">
@@ -145,7 +145,7 @@
 
 
 								<p class="description">
-									Select the position where the <strong>Disclaimer Text</strong> will
+									Select the position where the <strong>Disclaimer / Notification Text</strong> will
 									display in an Article or Post</p>
 
 
@@ -186,7 +186,7 @@
 								</div>
 
 								<p class="description">
-									Checked Authors will have <strong>Disclaimer</strong> appear at their articles
+									Checked Authors will have <strong>Disclaimer / Notification</strong> appear at their articles
 								</p>
 							</td>
 
@@ -223,13 +223,75 @@
 			<h3><span>About Developer</span></h3>
 
 			<div class="inside">
-				Hi, I am Agbonghama Collins, developer of this plugin.<br/>
-				Any question, shoot me an email at <strong>me@w3guy.com</strong>.
+				<p>Hi, I am Agbonghama Collins, developer of this plugin.<br/>
+				Any question, shoot me an email at <strong>me@w3guy.com</strong>.</p>
+				<p>Follow me on <a href="http://twitter.com/w3guy">Twitter</a>, add me on <a href="http://facebook.com/tech4sky">Facebook</a> or on <a href="http://plus.google.com/116181276412462774298?rel=author">Google+</a></p>
 			</div>
 			<!-- .inside -->
 
 		</div>
 		<!-- .postbox -->
+
+		<div class="postbox">
+
+			<h3><span>Donation</span></h3>
+
+			<div class="inside">
+				<p>If you find this plugin useful, please consider making a donation to keep this plugin active and updated.<br/>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="HAAAMDMXMSP58">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form></p>
+			</div>
+			<!-- .inside -->
+
+		</div>
+		<!-- .postbox -->
+
+		<div class="postbox">
+
+			<h3><span>My Blog Recent Updates</span></h3>
+
+			<div class="inside">
+
+				<?php // Get RSS Feed(s)
+				include_once( ABSPATH . WPINC . '/feed.php' );
+
+				// Get a SimplePie feed object from the specified feed source.
+				$rss = fetch_feed( 'http://feeds.feedburner.com/tech4sky' );
+
+				if ( ! is_wp_error( $rss ) ) : // Checks that the object is created correctly
+
+					// Figure out how many total items there are, but limit it to 5.
+					$maxitems = $rss->get_item_quantity( 5 );
+
+					// Build an array of all the items, starting with element 0 (first element).
+					$rss_items = $rss->get_items( 0, $maxitems );
+
+				endif;
+				?>
+
+				<ul>
+					<?php if ( $maxitems == 0 ) : ?>
+						<li><?php _e( 'No items', 'my-text-domain' ); ?></li>
+					<?php else : ?>
+						<?php // Loop through each feed item and display each item as a hyperlink. ?>
+						<?php foreach ( $rss_items as $item ) : ?>
+							<li>
+								<a href="<?php echo esc_url( $item->get_permalink() ); ?>"
+								   title="<?php printf( __( 'Posted %s', 'my-text-domain' ), $item->get_date('j F Y | g:i a') ); ?>">
+									<?php echo esc_html( $item->get_title() ); ?>
+								</a>
+							</li>
+						<?php endforeach; ?>
+					<?php endif; ?>
+				</ul>
+			</div>
+			<!-- .inside -->
+
+		</div>
 
 	</div>
 	<!-- .meta-box-sortables -->
