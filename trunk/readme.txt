@@ -2,9 +2,9 @@
 Contributors: Collizo4sky
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HAAAMDMXMSP58
 Tags: alert, author, blogs, contributor, disclaimer, guest author, membership, message, multi-author, notification, post, update
-Requires at least: 3.5
+Requires at least: 4.2
 Tested up to: 3.9.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,7 +44,7 @@ Search and install the plugin from your WordPres dashboard.
 == Screenshots ==
 
 1. Disclaimer Message | Settings Page
-2. CSS Style | Settings Page 
+2. CSS Style | Settings Page
 3. Disclaimer Position | Settings Page
 4. Authors | Settings Page
 5. Meta Box | Settings Page
@@ -59,6 +59,9 @@ The plugin is quite easy to use. Go to the settings page and check the options t
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed XSS security vulnerability
+* Fixed header already sent error.
+
 = 1.0 =
 * Initial release.
-
