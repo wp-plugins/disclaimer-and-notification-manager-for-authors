@@ -3,8 +3,8 @@
 /*
 Plugin Name: Disclaimer and Notification Manager for Authors
 Plugin URI: http://w3guy.com
-Description: This plugin simplify the process of adding Diclaimers at the top or bottom of an article written by a guest contributor.
-Version: 1.0.1
+Description: This plugin simplify the process of adding Disclaimers or custom notificaton at the top or bottom of an article written by a guest contributor.
+Version: 1.0.2
 Author: Agbonghama Collins
 Author URI: http://w3guy.com
 */
