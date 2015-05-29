@@ -28,6 +28,9 @@ This plugin simplify the process of adding Disclaimers and Custom Notifications 
 
 6. Placeholder to auto-magically include authors first name, last name and username without to manually type the author name of the article..
 
+### Feature-rich Plugins
+* **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](http://profilepress.net)
+
 == Installation ==
 
 = Step 1 =
