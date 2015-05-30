@@ -2,8 +2,8 @@
 Contributors: Collizo4sky
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HAAAMDMXMSP58
 Tags: alert, author, blogs, contributor, disclaimer, guest author, membership, message, multi-author, notification, post, update
-Requires at least: 4.2.2
-Tested up to: 3.9.2
+Requires at least: 3.9
+Tested up to: 4.2.2
 Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
